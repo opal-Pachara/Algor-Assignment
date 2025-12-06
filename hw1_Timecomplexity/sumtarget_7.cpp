@@ -7,12 +7,6 @@ void insertarr(int arr[],int n){
     }
 }
 
-void printarr(int arr[],int n){
-    for(int i = 0;i<n;i++){
-        cout<<arr[i]<<" ";
-    }
-}
-
 void sumtarget(int arr[],int n,int target){
     for(int i = 0;i<n;i++){
         for(int j = i+1;j<n;j++){
@@ -30,7 +24,6 @@ int main(){
     int arr[n];
 
     insertarr(arr,n);
-    // printarr(arr,n);
     cin>>target;
     sumtarget(arr,n,target);
 
