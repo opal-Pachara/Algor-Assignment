@@ -1,15 +1,11 @@
 #include <iostream>
 using namespace std;
 
-void insetA(int A[],int n){
+void insertArr(int A[],int B[],int n){
     int i;
     for(i = 0; i < n; i++){
         cin>>A[i];
     }
-}
-
-void insertB(int B[],int n){
-    int i;
     for(i = 0; i < n; i++){
         cin>>B[i];
     }
@@ -59,10 +55,8 @@ void Union(int A[],int B[],int n){
 int main(){
     int n;
     cin>>n;
-    int A[n];
-    int B[n];
-    insetA(A,n);
-    insertB(B,n);
+    int A[n], B[n];
+    insertArr(A,B,n);
     Intersec(A,B,n);
     Union(A,B,n);
     return 0;
