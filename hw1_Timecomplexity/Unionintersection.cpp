@@ -25,7 +25,7 @@ void Intersec(int A[],int B[],int n){
 
 void Union(int A[],int B[],int n){
     int i,j;
-    
+
     for(i = 0; i < n; i++){
         cout<<A[i]<<" ";
     }

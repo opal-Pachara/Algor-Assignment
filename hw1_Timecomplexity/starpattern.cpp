@@ -149,7 +149,7 @@ void RevRightHalfPyramid(int n){
 		cout<<endl;
 	}
 }
-
+ 
 void LeftHalfPyramid(int n){
 	int i,j;
 	for(i = 1; i <= n; i++){
