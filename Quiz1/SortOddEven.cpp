@@ -32,33 +32,43 @@ void reversearr(int arr[],int n){
     }
 }
 
-void printEvenAndOdd(int Oddarr[],int Evenarr[]){
+void printOdd(int Oddarr[],int Evenarr[]){
     int i;
-    if(numodd>numeven){
     quicksort(Oddarr,0,numodd-1);
     for(i = 0; i < numodd; i++){
-            cout<<Oddarr[i]<<" ";
-        }
+        cout<<Oddarr[i]<<" ";
+    }
     quicksort(Evenarr,0,numeven-1);
     reversearr(Evenarr,numeven);
     for(i = 0 ; i < numeven ; i++){
         cout<<Evenarr[i]<<" ";
-        }
     }
-    else{
+
+}
+
+void printEven(int Oddarr[],int Evenarr[]){
+    int i;
     quicksort(Evenarr,0,numeven-1);
     for(i = 0 ; i < numeven ; i++){
         cout<<Evenarr[i]<<" ";
-        }
+    }
     quicksort(Oddarr,0,numodd-1);
     reversearr(Oddarr,numodd);
     for(i = 0; i < numodd; i++){
-            cout<<Oddarr[i]<<" ";
-        }
+        cout<<Oddarr[i]<<" ";
     }
 }
 
-void insertEvenandOdd(int Oddarr[],int Evenarr[],int n){
+void CheckArr(int Oddarr[],int Evenarr[]){
+    if(numodd>numeven){
+        printOdd(Oddarr,Evenarr);
+    }
+    else{
+        printEven(Oddarr,Evenarr);
+    }
+}
+
+void insertEvenAndOdd(int Oddarr[],int Evenarr[],int n){
     int i;
     int num;
     for(i = 0; i < n; i++){
@@ -80,7 +90,7 @@ int main(){
     cin>>n;
     int Evenarr[n];
     int Oddarr[n];
-    insertEvenandOdd(Oddarr,Evenarr,n);
-    printEvenAndOdd(Oddarr,Evenarr);
+    insertEvenAndOdd(Oddarr,Evenarr,n);
+    CheckArr(Oddarr,Evenarr);
     return 0;
 }
