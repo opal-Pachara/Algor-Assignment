@@ -39,7 +39,7 @@ void insertGraph(vector<vector<int> > &graph, int edge){
 void printGraph(vector<vector<int> > graph, int vertex){
 	int i,j;
 	for(i = 0;i < vertex; i++){
-		for(j = 0; j< vertex; j++){
+		for(j = 0; j < vertex; j++){
 			cout<<graph[i][j]<<" ";
 		}
 		cout<<"\n";

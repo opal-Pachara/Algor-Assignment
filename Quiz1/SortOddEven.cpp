@@ -65,16 +65,9 @@ void printEven(vector<int> &Evenarr,int numeven){
 void CheckArr(vector<int> &Oddarr,vector<int> &Evenarr, int numodd,int numeven){
     quicksort(Evenarr,0,numeven-1);
     quicksort(Oddarr,0,numodd-1);
-    if(numodd>numeven){
-        printOdd(Oddarr,numodd);
-        reversearr(Evenarr,numeven);
-        printEven(Evenarr,numeven);
-    }
-    else{
-        printEven(Evenarr,numeven);
-        reversearr(Oddarr,numodd);
-        printOdd(Oddarr,numodd);
-    }
+    printOdd(Oddarr,numodd);
+    reversearr(Evenarr,numeven);
+    printEven(Evenarr,numeven);
 }
 
 int main(){
