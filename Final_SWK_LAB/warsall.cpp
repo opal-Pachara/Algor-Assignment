@@ -6,8 +6,13 @@ using namespace std;
 
 void printGraph(int vertex,vector<vector<int> > &matrixGraph) {
     cout << "\n";
+    cout << "   ";
+    for(int i = 1 ; i <= vertex ; i++){
+        cout << i << " ";
+    }
+    cout << "\n";
     for (int i = 1; i <= vertex; i++) {
-        cout<<i<<"| ";
+        cout << i << "| ";
         for (int j = 1; j <= vertex; j++) {
             cout << matrixGraph[i][j] << " ";
         }
