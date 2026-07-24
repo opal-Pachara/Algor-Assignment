@@ -20,6 +20,12 @@ void printGraph(int vertex,vector<vector<int> > &matrixGraph) {
     }
 }
 
+void intialGraph(int vertex,vector<vector<int> > &matrixGraph){
+    for (int i = 1; i <= vertex; i++) {
+        matrixGraph[i][i] = 0;
+    }
+}
+
 void insertGraph(int edge, vector<vector<int> > &matrixGraph) {
     for (int i = 0; i < edge; i++) {
         int start, end, distance;
@@ -50,10 +56,7 @@ int main() {
     cin >> vertex >> edge;
     vector<vector<int> > matrixGraph(vertex + 1, vector<int>(vertex + 1, INF));
 
-    for (int i = 1; i <= vertex; i++) {
-        matrixGraph[i][i] = 0;
-    }
-
+    intialGraph(vertex,matrixGraph);
     insertGraph(edge, matrixGraph);
     cout<< "\n";
     cout << "D0";

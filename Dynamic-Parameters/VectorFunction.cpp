@@ -20,7 +20,7 @@ int partition(vector<int>& arr,int left,int right){
     int pivot = arr[right];
     cout << "Pivot : " << pivot << "\n";
     for(int j = left ; j < right ; j++){
-        if(arr[j]<=pivot){
+        if(arr[j]<pivot){
             swap(arr[i],arr[j]);
             i++;
         }

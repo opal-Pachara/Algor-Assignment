@@ -14,11 +14,13 @@ long long F_TD(int n,int k,vector<vector<int> > &memo){
 
 long long F_BU(int n,int k){
     vector<vector<long long> > memo(n+1,vector<long long>(k+1));
+
     for(int i = 0 ; i <= n ; i++){
         memo[i][0] = 1;
         memo[i][1] = 1;
         memo[i][i] = 1;
     }
+    
     for(int i = 2; i <= n; i++){
         for(int j = 2 ; j < i; j++){
             memo[i][j] = memo[i-1][j] + memo[i-1][j-2];
