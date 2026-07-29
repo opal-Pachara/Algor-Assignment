@@ -2,18 +2,19 @@
 #include <iostream>
 #include <vector>
 
-void BubbleSort(int arr[]){
-    for(int i = 0 ; i < arr.size() ; i++){
-        for(int j = 0 ; j < arr.size()-i-1; j++){
-            if(arr[j] > arr[j+1]){
-                std::swap(arr[j],arr[j+1]);
-            }
-        }
-    }
-}
+// void BubbleSort(int arr[]){
+//     for(int i = 0 ; i < arr.size() ; i++){
+//         for(int j = 0 ; j < arr.size()-i-1; j++){
+//             if(arr[j] > arr[j+1]){
+//                 std::swap(arr[j],arr[j+1]);
+//             }
+//         }
+//     }
+// }
+
 
 long long fibonacci(int n){
-    if(n == 0){
+    if(n <= 0){
         return 0;
     }
     if(n == 1){
@@ -33,12 +34,4 @@ unsigned long long int Factorial(int n){
         sumfactorial = sumfactorial * i;
     }
     return sumfactorial;
-}
-
-int add(int a,int b){
-    return a+b;
-}
-
-void greet(){
-    std::cout << "Hello world!" << "\n";
 }

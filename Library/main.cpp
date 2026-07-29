@@ -4,14 +4,19 @@
 
 
 int main(){
-    int arr[] = {9,7,8,2,0,1};
-    BubbleSort(arr);
-    for(auto arr : i){
-        cout << i << " ";
+    std::vector<int> arr{0,9,2,7,5,4,2};
+    Sort(arr);
+
+    for(auto i : arr){
+        std::cout << i << " ";
     }
+    // int arr[] = {9,7,8,2,0,1};
+    // BubbleSort(arr);
+    // for(auto arr : i){
+    //     cout << i << " ";
+    // }
     // print_jack();
     // std::cout << Factorial(10) << "\n";
-    // std::cout << fibonacci(10);
     // print();
     // std::cout << find_min(2,find_min(3,1));
 
