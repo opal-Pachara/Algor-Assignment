@@ -5,11 +5,13 @@
 
 int main(){
     std::vector<int> arr{0,9,2,7,5,4,2};
-    Sort(arr);
+    BubbleSort(arr);
+    reverseVector(arr);
+    printVector(arr);
 
-    for(auto i : arr){
-        std::cout << i << " ";
-    }
+    // for(auto i : arr){
+    //     std::cout << i << " ";
+    // }
     // int arr[] = {9,7,8,2,0,1};
     // BubbleSort(arr);
     // for(auto arr : i){

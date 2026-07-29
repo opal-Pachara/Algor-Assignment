@@ -5,6 +5,17 @@
 // ประกาศฟังก์ชัน (ไม่ใส่ปีกกาขยายความ)
 
 template <typename T>
+void BubbleSort(std::vector<T>& arr){
+    for(int i = 0 ; i < arr.size() ; i++){
+        for(int j = 0 ; j < arr.size()-i-1 ; j++){
+            if(arr[j] > arr[j+1]){
+                std::swap(arr[j],arr[j+1]);
+            }
+        }
+    }
+}
+
+template <typename T>
 void medianOfThree(int left, int right, std::vector<T>& arr) {
     int mid = left + (right - left) / 2;
     if (arr[mid] < arr[left]) {
@@ -49,6 +60,20 @@ template<typename T,typename... Args>
 void Sort(std::vector<T>& array , Args&&... args) {
     QuickSort(0, array.size() - 1, array);
     Sort(std::forward<Args>(args)...);
+}
+
+template <typename T>
+void printVector(std::vector<T> arr){
+    for(auto i : arr){
+        std::cout << i << " ";
+    }
+}
+
+template <typename T>
+void reverseVector(std::vector<T>& arr){
+    for(int i = 0 ; i < arr.size()/2 ; i++){
+        std::swap(arr[i],arr[arr.size()-i-1]);
+    }
 }
 
 long long fibonacci(int n);
